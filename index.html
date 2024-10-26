@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alyssa Magaling - Portfolio</title>
+    <link rel="stylesheet" href="style1.css">
+    
+   
+</head>
+
+<body>
+    <!-- Header -->
+    <nav id="desktop-nav">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Your Logo" />
+
+        </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+       
+        
+    </nav>
+    <nav id="responsive-nav">
+        <div class="logo"> <img src="assets/logo.png" alt="Your Logo" /></div>
+        <div class="responsive-menu">
+            <div class="responsive-icon" onclick="toggleMenu()">
+            <span></span>                      
+            <span></span>                      
+            <span></span>                      
+            </div>
+            <div class="menu-links">
+                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Project</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>       
+            </div>
+        </div>   
+    </nav>
+
+    <!-- Home Section --> 
+     
+    <section id="profile" class="hero">
+    
+            <div class="section_pic-container">
+               <img src="assets/myicon.png" alt="aly-profile">
+               </div>
+               <div class="section_text">
+                   <p class="section__text__p1">Hi, I'm</p>
+                   <h1 class="title">Alyssa Magaling</h1>
+                   <p class="section_text_p2">Welcome to my Portfolio!</p>
+       
+                   <div class="btn-container">
+                                       
+                    <button class="btn btn-color-1" onclick="location.href='#contact'">
+                        Contact
+                    </button>
+                    
+                   </div>                  
+                   
+                   
+               </div>
+      
+        
+    </section>
+    
+
+    
+
+    <!-- About Me Section -->
+   <div class="container">
+        <section id="about" class="profile-section">
+            <img src="assets/mypic.png" alt="My Photo" class="profile-image">
+            <div class="intro">
+                <p>Showcasing my skills, projects, and more</p>
+            </div>
+        </section>
+
+        <section class="about-me">
+            <h2>About Me</h2>
+            <p> Hi there! I'm <strong>Alyssa Magaling</strong>, a committed graphic designer and web developer. My area of expertise is using HTML, CSS, JavaScript, and PHP to create dynamic, captivating websites. My passion for neat code and imaginative design motivates me to produce excellent work.</p>
+            <p>Additionally, I have a strong background in graphic design and am skilled with programs like Photoshop and Indesign.</p>
+
+            <h2>My Strengths</h2>
+            <ul class="strengths">
+                <li>🌟 Strong problem-solving skills</li>
+                <li>🌟 Responsive web design</li>
+                <li>🌟 Collaborative teamwork</li>
+                <li>🌟 Innovative and creative thinking</li>
+            </ul>
+        </section>
+
+        <!-- Languages and Skills Section -->
+        <section class="languages-skills">
+            <h2>Languages and Skills</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Language</th>
+                        <th>Skill Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td class="stars">&#9733;&#9733;&#9734;&#9734;&#9734;</td>
+                    </tr>
+                    <tr>
+                        <td>PHP</td>
+                        <td class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+                    </tr>
+                    <tr>
+                        <td>MySQL</td>
+                        <td class="stars">&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills">
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <img src="assets/webd.jpg" alt="Web Development">
+                    <p>Web Development (HTML, CSS, JavaScript, PHP)</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/grp.jpg" alt="Graphic Design">
+                    <p>Graphic Design (Photoshop, Illustrator)</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/db.png" alt="Database Management">
+                    <p>Database Management (MySQL, MongoDB)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 class="project-h2"> Projects</h2>
+            <div class="project-container">
+                <div class="project-thumbnails">
+                    <img src="assets/alm.jpeg" alt="Project 1" onclick="openModal(0)" class="project-image">
+                    <h3>Project 1</h3>
+                </div>
+                <div class="project-thumbnails">
+                    <img src="assets/ck.jpeg" alt="Project 2" onclick="openModal(1)" class="project-image">
+                    <h3>Project 2</h3>
+                </div>
+                <div class="project-thumbnails">
+                    <img src="assets/ess.png" alt="Project 3" onclick="openModal(2)" class="project-image">
+                    <h3>Project 3</h3>
+                </div>
+            </div>
+
+            <!-- Modal for project images and descriptions -->
+            <div id="projectModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="fullImage">
+                <div id="modalDescription"></div>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section class="profile-section">
+            <img src="assets/phone.png " alt="My Photo" class="profile-image">
+            <div class="intro">
+             
+                <p>Your thoughts matter! Feel free to drop me a message.</p>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact">
+            <p class="section__text__p1">Contact Me</p>
+            
+            <div class="contact-info-upper-container">
+                <div class="contact-info-container">
+                    <img src="assets/email.png" alt="Email icon"
+                    class="icon contact-icon"/>
+                    <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=magalingalyssa@gmail.com" target="_blank">magalingalyssa@gmail.com</a></p>
+            </div>
+            
+            
+        </section>
+       
+        
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Alyssa Magaling. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>
